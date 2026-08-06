@@ -14,3 +14,4 @@ data/processed/weekly_snapshots/*
 .env
 .github/workflows/
 .github/workflows/
+!data/raw/raw_input.csv
