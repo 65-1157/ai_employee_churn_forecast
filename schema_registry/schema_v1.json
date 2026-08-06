@@ -1,0 +1,12 @@
+{
+  "version": "v1",
+  "effective_date": "2025-01-01",
+  "description": "Current questionnaire structure, matching the IBM HR Attrition dataset fields used in this MVP.",
+  "fields": {
+    "JobSatisfaction": {"type": "int", "range": [1, 4]},
+    "OverTime": {"type": "categorical", "values": ["Yes", "No"]},
+    "WorkLifeBalance": {"type": "int", "range": [1, 4]},
+    "EnvironmentSatisfaction": {"type": "int", "range": [1, 4]},
+    "RelationshipSatisfaction": {"type": "int", "range": [1, 4]}
+  }
+}

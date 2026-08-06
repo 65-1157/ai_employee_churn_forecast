@@ -1,0 +1,17 @@
+{
+  "v1_to_canonical": {
+    "JobSatisfaction": {"canonical": "job_satisfaction_norm", "transform": "scale_1_4_to_0_1"},
+    "OverTime": {"canonical": "overtime_flag", "transform": "yesno_to_bool"},
+    "WorkLifeBalance": {"canonical": "work_life_balance_norm", "transform": "scale_1_4_to_0_1"},
+    "EnvironmentSatisfaction": {"canonical": "environment_satisfaction_norm", "transform": "scale_1_4_to_0_1"},
+    "RelationshipSatisfaction": {"canonical": "relationship_satisfaction_norm", "transform": "scale_1_4_to_0_1"}
+  },
+  "v2_to_canonical": {
+    "JobSatisfactionScore": {"canonical": "job_satisfaction_norm", "transform": "scale_1_5_to_0_1"},
+    "OverTimeHoursLastMonth": {"canonical": "overtime_flag", "transform": "hours_to_bool_threshold_10"},
+    "WorkLifeBalance": {"canonical": "work_life_balance_norm", "transform": "scale_1_4_to_0_1"},
+    "EnvironmentSatisfaction": {"canonical": "environment_satisfaction_norm", "transform": "scale_1_4_to_0_1"},
+    "RelationshipSatisfaction": {"canonical": "relationship_satisfaction_norm", "transform": "scale_1_4_to_0_1"},
+    "ManagerSupportScore": {"canonical": "manager_support_norm", "transform": "scale_1_5_to_0_1"}
+  }
+}

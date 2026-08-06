@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+models/*.pkl
+outputs/scores/*.csv
+outputs/reports/*.md
+outputs/data_quality/*.json
+outputs/review_flags/*.json
+outputs/routing/*.json
+data/canonical/*.parquet
+data/processed/weekly_snapshots/*
+!**/.gitkeep
+!logs/review_log.csv
+.env
+.github/workflows/
+.github/workflows/
