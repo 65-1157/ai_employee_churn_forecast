@@ -1,0 +1,13 @@
+{
+  "version": "v2",
+  "effective_date": "2026-06-01",
+  "description": "Illustrative revised questionnaire: rescaled satisfaction question, overtime measured in hours instead of yes/no, and a new manager-support question added.",
+  "fields": {
+    "JobSatisfactionScore": {"type": "int", "range": [1, 5]},
+    "OverTimeHoursLastMonth": {"type": "float", "range": [0, 100]},
+    "WorkLifeBalance": {"type": "int", "range": [1, 4]},
+    "EnvironmentSatisfaction": {"type": "int", "range": [1, 4]},
+    "RelationshipSatisfaction": {"type": "int", "range": [1, 4]},
+    "ManagerSupportScore": {"type": "int", "range": [1, 5]}
+  }
+}
