@@ -1,0 +1,85 @@
+{
+  "generated_at": "2026-08-06T20:57:43.625846",
+  "seeds_used": [
+    42,
+    123,
+    2024
+  ],
+  "results": {
+    "RandomForest": {
+      "auc_mean": 0.7634593849599449,
+      "auc_std": 0.005128529871429404,
+      "brier_mean": 0.12767415302501353,
+      "brier_std": 0.0007325306811022463,
+      "recall_mean": 0.2765957446808511,
+      "recall_std": 0.01737226767931332
+    },
+    "ExtraTrees": {
+      "auc_mean": 0.762684124386252,
+      "auc_std": 0.0043058544998203375,
+      "brier_mean": 0.11825285337282532,
+      "brier_std": 0.00040872914946845485,
+      "recall_mean": 0.1843971631205674,
+      "recall_std": 0.020059766842171565
+    },
+    "GradientBoosting": {
+      "auc_mean": 0.7881815832543717,
+      "auc_std": 0.012672254464397464,
+      "brier_mean": 0.11014008020063726,
+      "brier_std": 0.002366573777258235,
+      "recall_mean": 0.3475177304964539,
+      "recall_std": 0.010029883421085795
+    },
+    "HistGradientBoosting": {
+      "auc_mean": 0.7772417951589284,
+      "auc_std": 0.005389092021575317,
+      "brier_mean": 0.11340194816534666,
+      "brier_std": 0.0029152689871827287,
+      "recall_mean": 0.3333333333333333,
+      "recall_std": 0.010029883421085769
+    },
+    "XGBoost": {
+      "auc_mean": 0.8127889281304735,
+      "auc_std": 0.004822988929811557,
+      "brier_mean": 0.11344362725656966,
+      "brier_std": 0.002712614519271265,
+      "recall_mean": 0.3404255319148936,
+      "recall_std": 0.0
+    },
+    "LightGBM": {
+      "auc_mean": 0.7660723002268356,
+      "auc_std": 0.013509503646782205,
+      "brier_mean": 0.1153752118454003,
+      "brier_std": 0.0037124207651511947,
+      "recall_mean": 0.3546099290780142,
+      "recall_std": 0.020059766842171565
+    },
+    "CatBoost": {
+      "auc_mean": 0.7955034886725816,
+      "auc_std": 0.013121783136431498,
+      "brier_mean": 0.1089755052753456,
+      "brier_std": 0.004095569021045643,
+      "recall_mean": 0.36170212765957444,
+      "recall_std": 0.01737226767931332
+    },
+    "Ensemble": {
+      "auc_mean": 0.7921153128319981,
+      "auc_std": 0.004046647945795699,
+      "brier_mean": 0.10794334909728026,
+      "brier_std": 0.001370564584221666,
+      "recall_mean": 0.34042553191489366,
+      "recall_std": 0.01737226767931332
+    }
+  },
+  "ensemble_weights": {
+    "RandomForest": 0.1340124876766349,
+    "ExtraTrees": 0.1336181399934275,
+    "GradientBoosting": 0.14658779713002523,
+    "HistGradientBoosting": 0.14102311315587687,
+    "XGBoost": 0.15910468470442182,
+    "LightGBM": 0.13534158542374122,
+    "CatBoost": 0.15031219191587245
+  },
+  "best_individual_model": "XGBoost",
+  "ensemble_beats_best_individual": false
+}
