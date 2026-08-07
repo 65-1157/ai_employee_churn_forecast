@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-08-07T19:51:11.169119",
+  "method": "permutation importance ranking + feature-count sweep, GradientBoosting reference model, 3-seed fairness",
+  "total_features_available": 39,
+  "recommended_k": 18,
+  "selected_features": [
+    "OverTime_Flag",
+    "BusinessTravel_Travel_Frequently",
+    "MaritalStatus_Single",
+    "Department_Research & Development",
+    "JobSatisfaction",
+    "BusinessTravel_Travel_Rarely",
+    "Department_Sales",
+    "JobInvolvement",
+    "MonthlyIncome",
+    "TrainingTimesLastYear",
+    "EnvironmentSatisfaction",
+    "StockOptionLevel",
+    "Gender_Male",
+    "EducationField_Medical",
+    "MaritalStatus_Married",
+    "RelationshipSatisfaction",
+    "TenureRatio",
+    "PromotionStagnation"
+  ],
+  "dropped_features": [
+    "EducationField_Technical Degree",
+    "YearsSinceLastPromotion",
+    "YearsAtCompany",
+    "WorkLifeBalance",
+    "JobRole_Research Scientist",
+    "JobRole_Sales Representative",
+    "JobRole_Manufacturing Director",
+    "NumCompaniesWorked",
+    "PercentSalaryHike",
+    "EducationField_Other",
+    "JobRole_Research Director",
+    "JobRole_Manager",
+    "JobRole_Human Resources",
+    "DistanceFromHome",
+    "EducationField_Marketing",
+    "TotalWorkingYears",
+    "EducationField_Life Sciences",
+    "Age",
+    "IncomePerYearWorked",
+    "JobRole_Sales Executive",
+    "JobRole_Laboratory Technician"
+  ],
+  "performance_at_recommended_k": {
+    "test_auc": 0.8177563384730239,
+    "train_auc": 0.9379292551866483,
+    "gap": 0.1201729167136244
+  },
+  "performance_with_all_features": {
+    "test_auc": 0.7808883911907429,
+    "train_auc": 0.9655937511120601,
+    "gap": 0.1847053599213172
+  },
+  "note": "Derived using GradientBoosting as reference model. Recommended as a starting point for the other 6 models in 03_model_improve.ipynb -- not yet re-validated per-model."
+}
