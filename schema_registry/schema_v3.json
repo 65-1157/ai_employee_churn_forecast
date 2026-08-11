@@ -1,0 +1,17 @@
+{
+  "version": "v3",
+  "effective_date": "2026-08-07",
+  "description": "AI-tooling and workplace-automation questionnaire, proposed to complement the core HR questionnaire. Revised from the original 11-question draft: Q3's wording was de-biased, Q7/Q8's overlapping/broken answer options were fixed, and Q1 was reframed around remote-capability (a factor with real, documented impact on AI adoption) rather than vague geography. Question 10 from the original draft ('have you thought about seeking another job') is DELIBERATELY EXCLUDED from this schema -- see docs/decisions/0003-turnover-intent-question.md for why, and how it should be handled if fielded for real in the future.",
+  "fields": {
+    "RemoteCapableStatus": {"type": "categorical", "values": ["Not remote-capable", "Hybrid", "Fully remote-capable"]},
+    "AIUsageFrequency": {"type": "categorical", "values": ["Never/Rarely", "Frequently", "Daily"]},
+    "AIReliance": {"type": "categorical", "values": ["Autonomous, no reliance", "Somewhat, depends on task", "Heavily reliant"]},
+    "BeliefAIJobDisplacement": {"type": "categorical", "values": ["No", "Maybe", "Yes"]},
+    "BeliefAutomationReducesHiring": {"type": "categorical", "values": ["Never", "Maybe, it depends", "Yes, definitely"]},
+    "AIGuidanceSeeking": {"type": "categorical", "values": ["Never", "Sometimes", "Yes"]},
+    "AIImpactHumanConnections": {"type": "categorical", "values": ["No, not at all", "Somewhat", "Yes, significantly"]},
+    "ChangePassivity": {"type": "categorical", "values": ["No, I keep updating myself", "Yes, easier to stay passive", "Not applicable"]},
+    "EmployerAIGuidanceAdequacy": {"type": "categorical", "values": ["No", "Maybe", "Yes"]},
+    "AgreementEmployerAIActions": {"type": "categorical", "values": ["No", "Yes"]}
+  }
+}

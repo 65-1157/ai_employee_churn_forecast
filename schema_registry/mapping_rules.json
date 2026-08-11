@@ -13,5 +13,17 @@
     "EnvironmentSatisfaction": {"canonical": "environment_satisfaction_norm", "transform": "scale_1_4_to_0_1"},
     "RelationshipSatisfaction": {"canonical": "relationship_satisfaction_norm", "transform": "scale_1_4_to_0_1"},
     "ManagerSupportScore": {"canonical": "manager_support_norm", "transform": "scale_1_5_to_0_1"}
+  },
+  "v3_to_canonical": {
+    "RemoteCapableStatus": {"canonical": "remote_capable_norm", "transform": "remote_capable_to_0_1"},
+    "AIUsageFrequency": {"canonical": "ai_usage_frequency_norm", "transform": "ai_usage_freq_to_0_1"},
+    "AIReliance": {"canonical": "ai_reliance_norm", "transform": "ai_reliance_to_0_1"},
+    "BeliefAIJobDisplacement": {"canonical": "belief_ai_job_displacement_norm", "transform": "three_level_yes_maybe_no_to_0_1"},
+    "BeliefAutomationReducesHiring": {"canonical": "belief_automation_reduces_hiring_norm", "transform": "three_level_never_maybe_yes_to_0_1"},
+    "AIGuidanceSeeking": {"canonical": "ai_guidance_seeking_norm", "transform": "three_level_never_sometimes_yes_to_0_1"},
+    "AIImpactHumanConnections": {"canonical": "ai_impact_human_connections_norm", "transform": "impact_human_connections_to_0_1"},
+    "ChangePassivity": {"canonical": "change_passivity_norm", "transform": "change_passivity_to_0_1"},
+    "EmployerAIGuidanceAdequacy": {"canonical": "employer_ai_guidance_adequacy_norm", "transform": "three_level_yes_maybe_no_to_0_1"},
+    "AgreementEmployerAIActions": {"canonical": "agreement_employer_ai_actions_norm", "transform": "yesno_to_bool"}
   }
 }
