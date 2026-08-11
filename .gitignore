@@ -15,3 +15,4 @@ data/processed/weekly_snapshots/*
 .github/workflows/
 .github/workflows/
 !data/raw/raw_input.csv
+!data/canonical/ai_questionnaire_canonical.parquet
