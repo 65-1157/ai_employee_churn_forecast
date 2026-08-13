@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-08-13T19:41:05.615461",
+  "method": "Random Survival Forest, duration=YearsAtCompany, event=Attrition",
+  "excluded_leak_prone_features": [
+    "YearsAtCompany",
+    "YearsInCurrentRole",
+    "YearsWithCurrManager",
+    "YearsSinceLastPromotion",
+    "TotalWorkingYears"
+  ],
+  "n_survival_features": 36,
+  "concordance_index": 0.8878992993706211,
+  "concordance_index_caveat": "Not directly comparable in magnitude to classification AUC -- see Section 5 markdown for why."
+}
