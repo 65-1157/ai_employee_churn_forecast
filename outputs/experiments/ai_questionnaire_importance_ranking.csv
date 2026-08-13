@@ -1,50 +1,50 @@
 feature,importance,is_synthetic_ai_field
-OverTime_Flag,0.08347,False
-BusinessTravel_Travel_Frequently,0.04364,False
-MaritalStatus_Single,0.04005,False
-JobSatisfaction,0.02765,False
-BusinessTravel_Travel_Rarely,0.02096,False
-MonthlyIncome,0.01918,False
-StockOptionLevel,0.01883,False
-Department_Research & Development,0.01828,False
-EnvironmentSatisfaction,0.01732,False
-Department_Sales,0.01496,False
-JobInvolvement,0.01337,False
-TrainingTimesLastYear,0.01237,False
-RelationshipSatisfaction,0.00787,False
-ai_reliance_norm,0.00741,True
-DistanceFromHome,0.00693,False
-Gender_Male,0.0062,False
-PromotionStagnation,0.00537,False
-belief_automation_reduces_hiring_norm,0.00419,True
-YearsAtCompany,0.00389,False
-EducationField_Technical Degree,0.00375,False
-belief_ai_job_displacement_norm,0.00305,True
-JobRole_Sales Representative,0.00272,False
-employer_ai_guidance_adequacy_norm,0.00257,True
-WorkLifeBalance,0.00216,False
-TenureRatio,0.00211,False
-YearsSinceLastPromotion,0.00196,False
-JobRole_Human Resources,0.0019,False
-MaritalStatus_Married,0.00143,False
-NumCompaniesWorked,0.00127,False
-JobRole_Research Scientist,0.00092,False
-ai_usage_frequency_norm,0.00066,True
-PercentSalaryHike,0.00046,False
-ai_guidance_seeking_norm,0.0004,True
-JobRole_Research Director,0.00039,False
-EducationField_Medical,0.00019,False
-JobRole_Manufacturing Director,0.0,False
-EducationField_Other,0.0,False
+OverTime_Flag,0.09004,False
+BusinessTravel_Travel_Frequently,0.0303,False
+StockOptionLevel,0.02598,False
+MaritalStatus_Single,0.02396,False
+JobSatisfaction,0.02306,False
+TrainingTimesLastYear,0.01939,False
+MonthlyIncome,0.0184,False
+EnvironmentSatisfaction,0.01261,False
+Department_Sales,0.00933,False
+EducationField_Technical Degree,0.00888,False
+JobInvolvement,0.00865,False
+YearsSinceLastPromotion,0.0069,False
+NumCompaniesWorked,0.0064,False
+Department_Research & Development,0.0063,False
+BusinessTravel_Travel_Rarely,0.00531,False
+Gender_Male,0.00431,False
+JobRole_Human Resources,0.00323,False
+DistanceFromHome,0.00256,False
+Age,0.002,False
+belief_ai_job_displacement_norm,0.00171,True
+PercentSalaryHike,0.00147,False
+JobRole_Sales Representative,0.00088,False
+MaritalStatus_Married,0.00083,False
+PromotionStagnation,0.00056,False
+ai_usage_frequency_norm,0.00019,True
+JobRole_Sales Executive,0.00017,False
+ai_reliance_norm,0.00017,True
 JobRole_Manager,0.0,False
-agreement_employer_ai_actions_norm,-0.00022,True
-remote_capable_norm,-0.00083,True
-EducationField_Life Sciences,-0.00115,False
-change_passivity_norm,-0.00137,True
-TotalWorkingYears,-0.00137,False
-IncomePerYearWorked,-0.00149,False
-EducationField_Marketing,-0.00165,False
-JobRole_Sales Executive,-0.00292,False
-ai_impact_human_connections_norm,-0.00293,True
-Age,-0.00301,False
-JobRole_Laboratory Technician,-0.00757,False
+JobRole_Research Director,0.0,False
+EducationField_Life Sciences,0.0,False
+TenureRatio,-0.00015,False
+change_passivity_norm,-0.00023,True
+EducationField_Other,-0.00036,False
+JobRole_Research Scientist,-0.00036,False
+WorkLifeBalance,-0.00037,False
+EducationField_Medical,-0.00038,False
+JobRole_Manufacturing Director,-0.00067,False
+EducationField_Marketing,-0.0009,False
+agreement_employer_ai_actions_norm,-0.00166,True
+ai_impact_human_connections_norm,-0.00183,True
+YearsAtCompany,-0.00191,False
+ai_guidance_seeking_norm,-0.00208,True
+RelationshipSatisfaction,-0.00222,False
+belief_automation_reduces_hiring_norm,-0.00265,True
+employer_ai_guidance_adequacy_norm,-0.00359,True
+TotalWorkingYears,-0.00374,False
+remote_capable_norm,-0.00393,True
+JobRole_Laboratory Technician,-0.00601,False
+IncomePerYearWorked,-0.00894,False
