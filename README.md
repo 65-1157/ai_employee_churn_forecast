@@ -69,6 +69,47 @@ The `notebooks/` folder is a sequence, not a pile — each one either sets up, e
 
 ---
 
+## Data sources & synthetic data methodology
+
+This section documents exactly where every piece of data in this MVP came from, and — where synthetic — precisely how it was generated. Full transparency here matters: nothing below should be mistaken for real employee data.
+
+### a) Data sources used
+
+| Source | Type | Role in this MVP |
+|---|---|---|
+| **IBM HR Analytics Attrition dataset** | Public, fictional (created by IBM data scientists, not real employee records) | The core dataset — 1,470 employees, 35 columns. Used as-is; not itself further modified except for the weekly-snapshot noise described below. |
+| **Weekly snapshot simulation** | Synthetic (light, documented perturbation of the IBM data) | Stands in for a live weekly HR data feed, since the IBM dataset itself is a single static file |
+| **AI-tooling questionnaire responses** | Fully synthetic, fabricated for this MVP | Demonstrates schema-evolution handling; deliberately quarantined from the churn model — see notebooks `05`/`06` |
+| **SMOTE-resampled training data** | Synthetic (algorithmically generated, standard technique) | Used only during model training to correct class imbalance, never presented as real observations |
+
+### c) IBM dataset — source and reference
+
+**Kaggle listing:** `https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset`
+**Description (from the dataset's own listing):** a fictional dataset created by IBM data scientists to explore factors behind employee attrition.
+**Technical mirror used in this repo's code** (`src/data_loader.py`'s `DATA_URL`, a public GitHub-hosted CSV of the same dataset, avoiding a Kaggle-API dependency): `https://raw.githubusercontent.com/nelson-wu/employee-attrition-ml/master/WA_Fn-UseC_-HR-Employee-Attrition.csv`
+
+### b) & d) How synthetic data was generated, and the math behind it
+
+**1. Weekly snapshot noise** (`data_loader.py`, `simulate_weekly_snapshot()`)
+Since the IBM dataset is a single static file with no real time dimension, a small amount of week-to-week variation is simulated on three ordinal satisfaction fields (`JobSatisfaction`, `EnvironmentSatisfaction`, `WorkLifeBalance`):
+- **Distribution**: discrete uniform noise over `{-1, 0, +1}`, added to the field's existing value, then clipped back to the valid 1–4 range.
+- **Purpose**: gives the weekly pipeline something to actually process each run — not a claim about real behavioral change.
+
+**2. SMOTE (Synthetic Minority Oversampling Technique)** — used throughout model training (notebooks `02`, `03`, `04`, `06`, `07`)
+Addresses the ~16% class imbalance (few actual "left" cases) by generating new synthetic minority-class examples, rather than just duplicating existing ones:
+- **Method**: for each real minority-class point, one of its *k*-nearest minority-class neighbors is picked, and a new synthetic point is placed along the straight line between them: `x_new = x_i + λ(x_neighbor - x_i)`, where `λ` is drawn from a **Uniform(0, 1)** distribution.
+- Applied **only to the training split**, never to validation/test data — so evaluation always reflects the real class distribution.
+
+**3. AI-tooling questionnaire responses** (`05_ai_questionnaire_schema_demo.ipynb`) — the most involved synthetic generation in this project
+For each of the 10 questions, every employee's answer is a **weighted random draw from a categorical (multinomial) distribution**, computed in three steps:
+1. **Base rate**: a population-level starting probability per answer option. Where real external data existed, this was calibrated to it — most notably AI usage frequency, anchored to Gallup's Q4 2025 workplace AI-use study (≈49% never/rarely, ≈39% frequently, ≈12% daily). The other 9 questions use defensible but *not* externally-benchmarked base rates — this distinction is intentional and stated plainly, not implied to be equally rigorous.
+2. **Conditional shift**: the base probabilities are adjusted using only **existing, real, non-target employee attributes** — Age, JobLevel, Department, JobRole (e.g., younger employees and R&D-aligned roles shifted toward higher AI usage, consistent with Gallup's reported generational and role-based adoption gaps). **`Attrition` is never referenced anywhere in this generation logic** — this is what allows a later experiment (notebook `06`) to confirm the synthetic fields carry no real predictive signal.
+3. **Random draw**: `numpy.random.default_rng(seed=42).choice(options, p=probabilities)` — a seeded, reproducible weighted draw, not a deterministic rule.
+
+Full generation code and per-field probability tables are in `05_ai_questionnaire_schema_demo.ipynb`, Section 4.
+
+---
+
 ## Repository structure
 
 ```
